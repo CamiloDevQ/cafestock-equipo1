@@ -14,8 +14,6 @@ import java.util.Locale;
 
 /**
  * Guarda y lee los productos en datos/productos.csv (ruta relativa, junto al .jar).
- * Formato por línea: codigo;nombre;precio(punto decimal);stock;stockMinimo
- * Mismo estilo que VentaRepositorio.
  */
 public class ProductoRepositorio {
     private static final String SEP = ";";
