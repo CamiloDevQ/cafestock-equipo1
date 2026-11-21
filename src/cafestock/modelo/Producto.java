@@ -2,7 +2,6 @@ package cafestock.modelo;
 
 /**
  * HU-A1 · Clase Producto.
- * El código es único y no se puede cambiar: es final y no tiene setter.
  */
 public class Producto {
     private final String codigo;
