@@ -61,6 +61,12 @@ public class ProductoRepositorio {
         String linea = p.getCodigo() + SEP + p.getNombre() + SEP
                 + String.format(Locale.US, "%.2f", p.getPrecio()) + SEP
                 + p.getStock() + SEP + p.getStockMinimo() + System.lineSeparator();
+        if (Files.exists(archivo)) {
+            String contenido = Files.readString(archivo, StandardCharsets.UTF_8);
+                if (!contenido.isEmpty() && !contenido.endsWith("\n") && !contenido.endsWith("\r")) {
+                    linea = System.lineSeparator() + linea;
+                }
+        }
         Files.write(archivo, linea.getBytes(StandardCharsets.UTF_8),
                 StandardOpenOption.CREATE, StandardOpenOption.APPEND);
     }
